@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    tools:context=".Kelimeler"
+    tools:layout_editor_absoluteY="81dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="362dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="155dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/adManagerAdView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B37F31"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ingilizceKelimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="İngilizce Kelime"
+                android:textAlignment="center"
+                android:textColor="#1838ED"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/turkceKelimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#B35B21"
+                android:text="Türkçe Kelime"
+                android:textAlignment="center"
+                android:textColor="#0D0D12"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ornekCumle"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:background="#B37F31"
+                android:text="Örnek Cümle"
+                android:textAlignment="center"
+                android:textColor="#311B92"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/turkceCumle"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#B35B21"
+                android:text="Örnek Cümle"
+                android:textAlignment="center"
+                android:textColor="#0C0300"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/DeleteWordButton"
+        android:layout_width="138dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="23dp"
+        android:text="EKLE"
+        app:layout_constraintBottom_toBottomOf="@+id/nextWordButton"
+        app:layout_constraintEnd_toStartOf="@+id/nextWordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/nextWordButton"
+        android:layout_width="145dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="356dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="117dp"
+        android:onClick="siradakiKelime"
+        android:text="DİĞER KELİME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/DeleteWordButton"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:onClick="geriGel"
+        android:text="GERİ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextWordButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/kelimeSayisi"
+        android:layout_width="305dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:text="Kelime ="
+        android:textAlignment="inherit"
+        android:textColor="#0D0D12"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <com.google.android.gms.ads.admanager.AdManagerAdView
+        android:id="@+id/adManagerAdView"
+        android:layout_width="331dp"
+        android:layout_height="81dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="7dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4812352403081392/7229077502"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"></com.google.android.gms.ads.admanager.AdManagerAdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
