@@ -65,7 +65,7 @@ public class Kelimeler extends AppCompatActivity {
 
         AdRequest sayacGecisiReklami = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this,"ca-app-pub-4812352403081392/9895603448", sayacGecisiReklami,
+        InterstitialAd.load(this,"", sayacGecisiReklami,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
@@ -114,7 +114,7 @@ public class Kelimeler extends AppCompatActivity {
 
                 adView.setAdSize(AdSize.BANNER);
 
-                adView.setAdUnitId("ca-app-pub-4812352403081392/6989404355");
+                adView.setAdUnitId("");
             }
         });
 
